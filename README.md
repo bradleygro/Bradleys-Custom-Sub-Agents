@@ -16,7 +16,7 @@ Think of them as expert collaborators you can summon by name.
 
 | Agent | File | Purpose |
 |---|---|---|
-| 🧭 PM Mentor | `pm-mentor.md` | Product management coaching grounded in Marty Cagan's SVPG Product Model — keeps you honest about discovery, outcomes, and cross-functional collaboration |
+| 🧭 Marty Mentor | `marty-mentor.md` | Product management coaching grounded in Marty Cagan's SVPG Product Model — keeps you honest about discovery, outcomes, and cross-functional collaboration |
 
 ---
 
@@ -39,12 +39,12 @@ Claude Code looks for sub-agent definitions in a specific location depending on 
 your-project/
 └── .claude/
     └── agents/
-        └── pm-mentor.md
+        └── marty-mentor.md
 ```
 
 **Global** (available across all Claude Code sessions):
 ```
-~/.claude/agents/pm-mentor.md
+~/.claude/agents/marty-mentor.md
 ```
 
 Create the directory if it doesn't exist:
@@ -60,7 +60,7 @@ mkdir -p ~/.claude/agents
 Then move the `.md` file into place:
 
 ```bash
-cp pm-mentor.md .claude/agents/pm-mentor.md
+cp marty-mentor.md .claude/agents/marty-mentor.md
 ```
 
 ### Step 3 — Verify Claude Code can see it
@@ -80,11 +80,11 @@ Your sub-agent should appear in the list.
 You can invoke a sub-agent in two ways:
 
 **By name in your prompt:**
-> "Use the PM Mentor to review my approach to this discovery sprint."
+> "Use the Marty Mentor to review my approach to this discovery sprint."
 
 **With the slash command:**
 ```
-/agent pm-mentor
+/agent marty-mentor
 ```
 
 Claude Code will hand off to the sub-agent for that task. When the task is complete, control returns to the main Claude Code session.
@@ -95,7 +95,7 @@ You can also ask Claude Code to invoke the right sub-agent automatically — it 
 
 ## Best Practices
 
-**Be specific when invoking.** Sub-agents perform best when given a concrete situation to respond to, not an abstract question. Instead of "review my product thinking," try "I'm about to commit to building this feature without a prototype — can the PM Mentor pressure-test my approach?"
+**Be specific when invoking.** Sub-agents perform best when given a concrete situation to respond to, not an abstract question. Instead of "review my product thinking," try "I'm about to commit to building this feature without a prototype — can the Marty Mentor pressure-test my approach?"
 
 **Provide relevant context upfront.** Sub-agents don't retain memory of your prior Claude Code session. Give them the context they need: what you're working on, what decision you're facing, and what you've done so far.
 
